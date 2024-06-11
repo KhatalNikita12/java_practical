@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <h1>javascript Promt</h1>
+    <button onclick="fun()">Click Me</button>
+    <script>
+      function fun() {
+        var stud = prompt("Exams are near,have you started preparing for ?");
+        
+        if (stud == "No" || stud == "no" || stud == "NO") {
+          alert("Start Preparing");
+          confirm("Preparing for study");
+        }
+        if (stud == "Yes" || stud == "yes" || stud == "YES") {
+          alert("Good");
+          confirm("Finish your study");
+        }
+      }
+    </script>
+  </body>
+</html>

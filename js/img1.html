@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+Enter name :<input type="text" name="name" id="n">
+<h2>on click</h2>
+<input type="text" name="name" id="n" onClick="asd()">
+<h2>on blur</h2>
+<input type="text" name="name" id="n" onblur="asd()">
+<h2>on load</h2>
+<input type="text" name="name" id="n" onload="asd()">
+<div id="d"></div>
+<script>
+function asd()
+{
+var a=document.getElementById("n").value;
+if(a !=" ")
+{
+document.getElementById("n").style.color="red";
+document.getElementById("n").style.fontSize="100px";
+}
+else
+{
+var image=new Image();
+image.src="download.jpg";
+document.getElementById("d").appendChild(image);
+}
+}
+
+</script>
+</body>
+</html>
+
+

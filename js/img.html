@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Name Color and Display Image</title>
+<script>
+  function change() {
+    var inputs = document.getElementsByTagName("input");
+
+    for (var i = 0; i < inputs.length; i++) {
+      var input = inputs[i];
+      var name = input.value;
+
+      if (name) {
+        input.style.color = "red";
+        input.style.fontSize = "18px";
+      } else {
+        var img = new Image();
+        img.src = "download.jpg";
+        document.getElementById("d").innerHTML = "";
+        document.getElementById("d").appendChild(img);
+      }
+    }
+  }
+</script>
+</head>
+
+<body>
+  <h4>OnClick</h4><br>
+  Enter Name <input type="text" name="name" onclick="change()" /><br>
+
+  <h4>OnBlur</h4><br>
+  Enter Name <input type="text" name="name" onblur="change()"><br>
+
+  <h4>OnMouseOver</h4><br>
+  Enter Name <input type="text" name="name" onmouseover="change()">
+
+  <h4>OnMouseUp</h4><br>
+  Enter Name <input type="text" name="name" onmouseup="change()" />
+
+  <h4>OnLoad1</h4><br>
+  Enter Name <input type="text" name="name" onload="change()">
+
+  <div id="d"></div>
+</body>
+</html>

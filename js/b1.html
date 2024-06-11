@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      Enter Username : <input type="text" name="user" id="u" /><br />
+      Enter Password : <input type="password" name="pass" id="p" /><br />
+      <input type="button" value="submit" onclick="check()" />
+    </center>
+
+    <script>
+      function check() {
+        var i;
+        flag = false;
+        var us = document.getElementById("u").value;
+        var ps = document.getElementById("p").value;
+        if (
+          us.length >= 6 &&
+          us.length <= 15 &&
+          ps.length >= 6 &&
+          ps.length <= 15
+        ) {
+          for (var i = 0; i < (us.length || ps.length); i++) {
+            if (
+              (us.charAt(i) >= "a" && us.charAt(i) <= "z") ||
+              (us.charAt(i) >= "A" && us.charAt(i) <= "Z") ||
+              (us.charAt(i) >= "0" && us.charAt(i) <= "9")
+            ) {
+              if (
+                (ps.charAt(i) >= "a" && ps.charAt(i) <= "z") ||
+                (ps.charAt(i) >= "A" && ps.charAt(i) <= "Z") ||
+                (ps.charAt(i) >= "0" && ps.charAt(i) <= "9") ||
+                ps.charAt == "@" ||
+                ps.charAt == "#" ||
+                ps.charAt == "$"
+              ) {
+                flag = true;
+              } else flag = false;
+            }
+          }
+          if (flag == true) {
+            alert("Login Succesfully");
+          } else {
+            alert("Invalid Username and Password");
+          }
+        } else alert("Invalid due to Length");
+      }
+    </script>
+  </body>
+</html>
